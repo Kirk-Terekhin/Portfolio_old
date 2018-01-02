@@ -1,0 +1,83 @@
+// Переменные, миксины и т.д.
+@import import/var
+@import import/placeholders
+@import import/mixin
+
+html,
+body
+	width: 100%
+	font-size: 16px
+	margin: 0
+*
+	box-sizing: border-box
+	max-width: 100%
+img,svg
+	max-width: 100%
+body
+
+
+///////////////////////////////////////////////
+//  navigation
+///////////////////////////////////////////////
+.nav
+	background-color: $menu_bg
+	transition-duration: 500ms
+	&.active
+		background-color: $menu_bg_active
+	+before($before_sm)
+		width: $nav_width_xs
+	+respond($sm)
+		position: fixed
+		left: 0
+		top: 0
+		bottom: 0
+		width: $nav_width_sm
+		height: 100%
+		z-index: 100
+	+respond($md)
+		width: $nav_width_md
+	+respond($lg)
+
+
+///////////////////////////////////////////////
+//  hamburger
+///////////////////////////////////////////////
+$hamburger__icon_height: 5px
+.hamburger
+	+before($before_sm)
+		width: 70px
+		padding: 0.5rem
+	+respond($sm)
+		padding: 1rem 0
+		margin: auto
+		width: 80%
+.hamburger__wrap
+	cursor: pointer
+	height: $hamburger__icon_height * 7
+	position: relative
+.hamburger__active
+.hamburger__icon
+	position: absolute
+	left: 0
+	right: 0
+	width: 100%
+	height: $hamburger__icon_height
+	background-color: #fff
+	display: block
+	border-radius: 4px
+	transition-duration: 0.4s
+	transform-origin: center
+	&:nth-child(1)
+		top: 0
+	&:nth-child(2)
+		top: $hamburger__icon_height * 3
+	&:nth-child(3)
+		top: $hamburger__icon_height * 6
+	.hamburger__active &
+		top: $hamburger__icon_height * 3
+		&:nth-child(1)
+			transform: rotate(135deg)
+		&:nth-child(2)
+			transform: rotate(-225deg)
+		&:nth-child(3)
+			transform: rotate(-135deg)

@@ -1,0 +1,7 @@
+@mixin respond($from)
+  @media screen and (min-width: $from)
+    @content
+
+@mixin before($from)
+    @media screen and (max-width: $from)
+        @content
