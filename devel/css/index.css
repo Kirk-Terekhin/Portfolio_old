@@ -87,3 +87,47 @@ img, svg {
       -webkit-transform: rotate(-135deg);
       -ms-transform: rotate(-135deg);
       transform: rotate(-135deg); }
+
+.about {
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
+  overflow: auto;
+  z-index: 99; }
+  .about.active {
+    background-color: rgba(0, 0, 0, 0.9); }
+  @media screen and (max-width: 767px) {
+    .about {
+      position: absolute;
+      width: 100%;
+      right: 100%; }
+      .about.active {
+        right: 0; } }
+  @media screen and (min-width: 768px) {
+    .about {
+      display: block;
+      position: fixed;
+      left: 7%;
+      top: 0;
+      width: 90%;
+      max-height: 100%;
+      -webkit-border-radius: 0 0 15px 0;
+      border-radius: 0 0 15px 0;
+      -webkit-transform-origin: left top;
+      -ms-transform-origin: left top;
+      transform-origin: left top;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0); }
+      .about.active {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1); } }
+  @media screen and (min-width: 960px) {
+    .about {
+      left: 5%;
+      width: 85%; } }
+  @media screen and (min-width: 1150px) {
+    .about {
+      width: 80%; } }

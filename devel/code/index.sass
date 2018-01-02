@@ -81,3 +81,41 @@ $hamburger__icon_height: 5px
 			transform: rotate(-225deg)
 		&:nth-child(3)
 			transform: rotate(-135deg)
+
+
+
+///////////////////////////////////////////////
+//  about (unity)
+///////////////////////////////////////////////
+.about
+	// @extend %font_false
+	background-color: $menu_bg
+	transition-duration: 500ms
+	overflow: auto
+	z-index: 99
+	&.active
+		background-color: $menu_bg_active
+	+before($before_sm)
+		position: absolute
+		width: 100%
+		right: 100%
+		&.active
+			right: 0
+	+respond($sm)
+		display: block
+		position: fixed
+		left: $nav_width_sm
+		top: 0
+		width: $about_width_sm
+		max-height: 100%
+		border-radius: 0 0 15px 0
+		transform-origin: left top
+		transform: scale(0)
+		&.active
+			transform: scale(1)
+	+respond($md)
+		left: $nav_width_md
+		width: $about_width_md
+		// height: $about_height_md
+	+respond($lg)
+		width: $about_width_lg
