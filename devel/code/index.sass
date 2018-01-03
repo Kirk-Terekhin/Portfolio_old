@@ -13,7 +13,13 @@ body
 	max-width: 100%
 img,svg
 	max-width: 100%
+
 body
+	+before($before_sm)
+		background: url(./../images/mobile_bg.png) repeat center
+	+respond($sm)
+		background: url(./../images/bg.jpg) no-repeat bottom left fixed
+		background-size: cover
 
 
 ///////////////////////////////////////////////
