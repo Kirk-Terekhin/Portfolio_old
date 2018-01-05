@@ -19,15 +19,16 @@ body {
 img, svg {
   max-width: 100%; }
 
-@media screen and (max-width: 767px) {
-  body {
-    background: url(./../images/mobile_bg.png) repeat center; } }
-
-@media screen and (min-width: 768px) {
-  body {
-    background: url(./../images/bg.jpg) no-repeat bottom left fixed;
-    -webkit-background-size: cover;
-    background-size: cover; } }
+body {
+  font-family: 'Ubuntu', sans-serif; }
+  @media screen and (max-width: 767px) {
+    body {
+      background: url(./../images/mobile_bg.png) repeat center; } }
+  @media screen and (min-width: 768px) {
+    body {
+      background: url(./../images/bg.jpg) no-repeat bottom left fixed;
+      -webkit-background-size: cover;
+      background-size: cover; } }
 
 .bottomLine {
   display: inline-block;
