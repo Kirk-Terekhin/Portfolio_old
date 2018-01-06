@@ -1,9 +1,18 @@
-.grid__column {
+.about, .contacts {
+  font-size: 0; }
+
+.left,
+.right, .contact, .grid__column {
   font-size: 1rem; }
 
-.grid__column {
+.left,
+.right, .grid__column {
   display: inline-block;
   vertical-align: top; }
+
+.skill, .contact__link svg {
+  display: inline-block;
+  vertical-align: middle; }
 
 html,
 body {
@@ -35,6 +44,22 @@ body {
   padding-bottom: 5px;
   padding-right: 10px;
   border-bottom: 2px solid #dd4814; }
+
+@media screen and (max-width: 767px) {
+  .hidden_xs {
+    display: none; } }
+
+@media screen and (min-width: 768px) {
+  .hidden_xs {
+    display: block; } }
+
+@media screen and (max-width: 767px) {
+  .hidden_sm {
+    display: block; } }
+
+@media screen and (min-width: 768px) {
+  .hidden_sm {
+    display: none; } }
 
 .nav {
   background-color: rgba(0, 0, 0, 0.3);
@@ -155,6 +180,120 @@ body {
   @media screen and (min-width: 1150px) {
     .about {
       width: 80%; } }
+
+@media screen and (max-width: 767px) {
+  .radiusSVG {
+    display: none; } }
+
+@media screen and (min-width: 768px) {
+  .radiusSVG {
+    display: block;
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+    fill: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 15px;
+    height: 15px; } }
+
+.radiusSVG__topRight {
+  left: 100%;
+  top: 0; }
+
+.radiusSVG__leftBottom {
+  top: 100%;
+  left: 0; }
+
+.left,
+.right {
+  padding: 15px 10px 10px;
+  height: 100%;
+  overflow: hidden; }
+
+@media screen and (min-width: 768px) {
+  .left {
+    width: 45%; } }
+
+@media screen and (min-width: 768px) {
+  .right {
+    width: 55%; } }
+
+.about__h {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #fff; }
+
+.skills {
+  margin-bottom: 15px; }
+
+.skills__header {
+  font-size: 1.2rem;
+  color: #afafaf; }
+
+.skill {
+  margin: 10px; }
+
+.skill__css3,
+.skill__html5,
+.skill__bootstrap {
+  width: 60px; }
+
+.skill__jquery,
+.skill__jqueryui {
+  width: 170px; }
+
+.skill__gulp {
+  width: 40px; }
+
+.skill__jade {
+  width: 140px; }
+
+.skill__bower,
+.skill__js,
+.skill__nodeSass,
+.skill__sass {
+  width: 70px; }
+
+.contacts {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  padding-top: 10px; }
+
+.contact {
+  vertical-align: middle;
+  margin-bottom: 20px; }
+  @media screen and (max-width: 959px) {
+    .contact {
+      display: block;
+      direction: rtl;
+      text-align: left; }
+      .contact svg {
+        margin-right: 5px; } }
+  @media screen and (min-width: 960px) {
+    .contact {
+      display: inline-block; }
+      .contact:nth-child(even) {
+        width: 60%;
+        text-align: right; }
+        .contact:nth-child(even) svg {
+          margin-left: 5px; }
+      .contact:nth-child(odd) {
+        width: 40%;
+        text-align: left;
+        direction: rtl; }
+        .contact:nth-child(odd) svg {
+          margin-right: 5px; } }
+
+.contact__link {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none; }
+  .contact__link svg {
+    fill: #fff;
+    width: 2rem;
+    height: 2rem; }
 
 .portfolio {
   padding: 10px 20px;

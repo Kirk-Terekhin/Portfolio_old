@@ -26,6 +26,18 @@ body
 	padding-bottom: 5px
 	padding-right: 10px
 	border-bottom: 2px solid $ubuntu
+.hidden_xs
+	+before($before_sm)
+		display: none
+	+respond($sm)
+		display: block
+.hidden_sm
+	+before($before_sm)
+		display: block
+	+respond($sm)
+		display: none
+
+
 
 ///////////////////////////////////////////////
 //  navigation
@@ -99,7 +111,7 @@ $hamburger__icon_height: 5px
 //  about (unity)
 ///////////////////////////////////////////////
 .about
-	// @extend %font_false
+	@extend %font_false
 	background-color: $menu_bg
 	transition-duration: 500ms
 	overflow: auto
@@ -130,6 +142,112 @@ $hamburger__icon_height: 5px
 		// height: $about_height_md
 	+respond($lg)
 		width: $about_width_lg
+
+.radiusSVG
+	+before($before_sm)
+		display: none
+	+respond($sm)
+		display: block
+		transition-duration: 500ms
+		fill: $menu_bg
+		position: fixed
+		width: 15px
+		height: 15px
+.radiusSVG__topRight
+	left: 100%
+	top: 0
+.radiusSVG__leftBottom
+	top: 100%
+	left: 0
+
+.left,
+.right
+	@extend %font_true
+	@extend %inline_top
+	padding: 15px 10px 10px
+	height: 100%
+	overflow: hidden
+.left
+    +respond($sm)
+        width: 45%
+.right
+	+respond($sm)
+		width: 55%
+
+.avatar__img
+.about__h
+	font-size: 2rem
+	font-weight: 400
+	margin-bottom: 20px
+	color: #fff
+.skills
+	margin-bottom: 15px
+.skills__header
+	font-size: 1.2rem
+	color: #afafaf
+.skill
+	@extend %inline_middle
+	margin: 10px
+.skill__css3,
+.skill__html5,
+.skill__bootstrap
+	width: 60px
+.skill__jquery,
+.skill__jqueryui
+	width: 170px
+.skill__gulp
+	width: 40px
+.skill__jade
+	width: 140px
+.skill__bower,
+.skill__js,
+.skill__nodeSass,
+.skill__sass
+	width: 70px
+
+
+
+///////////////////////////////////////////////
+//  contacts
+///////////////////////////////////////////////
+.contacts
+    @extend %font_false
+    list-style: none
+    margin: 0
+    padding-left: 0
+    padding-top: 10px
+.contact
+    @extend %font_true
+    vertical-align: middle
+    margin-bottom: 20px
+    +before($before_md)
+        display: block
+        direction: rtl
+        text-align: left
+        svg
+            margin-right: 5px
+    +respond($md)
+        display: inline-block
+        &:nth-child(even)
+            width: 60%
+            text-align: right
+            svg
+                margin-left: 5px
+        &:nth-child(odd)
+            width: 40%
+            text-align: left
+            direction: rtl
+            svg
+                margin-right: 5px
+.contact__link
+    display: inline-block
+    color: #fff
+    text-decoration: none
+    svg
+        @extend %inline_middle
+        fill: #fff
+        width: 2rem
+        height: 2rem
 
 
 
