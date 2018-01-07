@@ -168,8 +168,8 @@ $hamburger__icon_height: 5px
 	height: 100%
 	overflow: hidden
 .left
-    +respond($sm)
-        width: 45%
+	+respond($sm)
+		width: 45%
 .right
 	+respond($sm)
 		width: 55%
@@ -211,43 +211,43 @@ $hamburger__icon_height: 5px
 //  contacts
 ///////////////////////////////////////////////
 .contacts
-    @extend %font_false
-    list-style: none
-    margin: 0
-    padding-left: 0
-    padding-top: 10px
+	@extend %font_false
+	list-style: none
+	margin: 0
+	padding-left: 0
+	padding-top: 10px
 .contact
-    @extend %font_true
-    vertical-align: middle
-    margin-bottom: 20px
-    +before($before_md)
-        display: block
-        direction: rtl
-        text-align: left
-        svg
-            margin-right: 5px
-    +respond($md)
-        display: inline-block
-        &:nth-child(even)
-            width: 60%
-            text-align: right
-            svg
-                margin-left: 5px
-        &:nth-child(odd)
-            width: 40%
-            text-align: left
-            direction: rtl
-            svg
-                margin-right: 5px
+	@extend %font_true
+	vertical-align: middle
+	margin-bottom: 20px
+	+before($before_md)
+		display: block
+		direction: rtl
+		text-align: left
+		svg
+			margin-right: 5px
+	+respond($md)
+		display: inline-block
+		&:nth-child(even)
+			width: 60%
+			text-align: right
+			svg
+				margin-left: 5px
+		&:nth-child(odd)
+			width: 40%
+			text-align: left
+			direction: rtl
+			svg
+				margin-right: 5px
 .contact__link
-    display: inline-block
-    color: #fff
-    text-decoration: none
-    svg
-        @extend %inline_middle
-        fill: #fff
-        width: 2rem
-        height: 2rem
+	display: inline-block
+	color: #fff
+	text-decoration: none
+	svg
+		@extend %inline_middle
+		fill: #fff
+		width: 2rem
+		height: 2rem
 
 
 
