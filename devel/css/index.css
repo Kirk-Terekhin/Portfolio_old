@@ -221,7 +221,7 @@ body {
 .about__h {
   font-size: 2rem;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   color: #fff; }
 
 .skills {
@@ -473,3 +473,79 @@ body {
   cursor: pointer; }
   .inDevel__closeButton:hover {
     fill: #fff; }
+
+.contact__link:hover svg {
+  -webkit-animation: rubberBand 2s both infinite;
+  animation: rubberBand 2s both infinite; }
+
+@-webkit-keyframes rubberBand {
+  0%, 10%, 45%, 100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  21% {
+    -webkit-transform: scaleY(1.35) scaleX(0.75);
+    transform: scaleY(1.35) scaleX(0.75); }
+  25% {
+    -webkit-transform: scaleY(0.75) scaleX(1.25);
+    transform: scaleY(0.75) scaleX(1.25); }
+  35% {
+    -webkit-transform: scaleY(1.15) scaleX(0.85);
+    transform: scaleY(1.15) scaleX(0.85); } }
+
+@keyframes rubberBand {
+  0%, 10%, 45%, 100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  21% {
+    -webkit-transform: scaleY(1.35) scaleX(0.75);
+    transform: scaleY(1.35) scaleX(0.75); }
+  25% {
+    -webkit-transform: scaleY(0.75) scaleX(1.25);
+    transform: scaleY(0.75) scaleX(1.25); }
+  35% {
+    -webkit-transform: scaleY(1.15) scaleX(0.85);
+    transform: scaleY(1.15) scaleX(0.85); } }
+
+.listLinks__link:hover svg {
+  -webkit-animation: tada 2.2s both infinite;
+  animation: tada 2.2s both infinite; }
+
+@-webkit-keyframes tada {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  10% {
+    -webkit-transform: scale(0.8) rotate(-10deg);
+    transform: scale(0.8) rotate(-10deg); }
+  20%, 26%, 32%, 38%, 44%, 50% {
+    -webkit-transform: scale(1.2) rotate(10deg);
+    transform: scale(1.2) rotate(10deg); }
+  23%, 29%, 35%, 41%, 47% {
+    -webkit-transform: scale(1.2) rotate(-10deg);
+    transform: scale(1.2) rotate(-10deg); }
+  53% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes tada {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  10% {
+    -webkit-transform: scale(0.8) rotate(-10deg);
+    transform: scale(0.8) rotate(-10deg); }
+  20%, 26%, 32%, 38%, 44%, 50% {
+    -webkit-transform: scale(1.2) rotate(10deg);
+    transform: scale(1.2) rotate(10deg); }
+  23%, 29%, 35%, 41%, 47% {
+    -webkit-transform: scale(1.2) rotate(-10deg);
+    transform: scale(1.2) rotate(-10deg); }
+  53% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
