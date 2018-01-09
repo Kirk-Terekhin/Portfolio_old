@@ -7,26 +7,51 @@ document.addEventListener("DOMContentLoaded", function() {
 	var grid = 4;
 	var closeRemoveDelay = 350;
 
+	var about = document.querySelector('.about');
+	var nav = document.querySelector('.nav');
+	var button = document.querySelector('.hamburger');
+
 	var portfolio__item = document.querySelectorAll('.portfolio__article');
 	var portfolio = document.querySelector('.portfolio');
 	var ifGrid = document.querySelectorAll('.grid__column');
 
 
-	navActive();
 	gridCreate();
 	closeDevel()
 
 	function navActive() {
-		var about = document.querySelector('.about');
-		var nav = document.querySelector('.nav');
-		var button = document.querySelector('.hamburger');
-		button.addEventListener('click', function() {
-			about.classList.toggle('active');
-			nav.classList.toggle('active');
-			button.classList.toggle('hamburger__active');
-		})
+		about.classList.toggle('active');
+		nav.classList.toggle('active');
+		button.classList.toggle('hamburger__active');
 	}
 
+	// button.addEventListener('click', function() {
+	// 	navActive();
+	// })
+	document.addEventListener('click', function(e) {
+		var target = e.target
+
+		if (parent(target, 'hamburger')) {
+			navActive();
+		}
+		if (about.className.indexOf('active') + 1) {
+			var _n = parent(target, 'nav');
+			var _a = parent(target, 'about');
+			if (!((!_n && _a) || (_n && !_a))) {
+				navActive();
+			}
+		}
+
+		function parent(targ,elemParent) {
+			while(targ != document){
+				if (targ.className.indexOf(elemParent) + 1) {
+					return true;
+				}
+				targ = targ.parentNode;
+			}
+			return false;
+		}
+	})
 
 	function gridCreate() {
 		gridCount();
