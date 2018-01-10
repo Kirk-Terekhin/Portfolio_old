@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 	gridCreate();
-	closeDevel()
+	// closeDevel()
 
 	function navActive() {
 		about.classList.toggle('active');
@@ -110,28 +110,28 @@ document.addEventListener("DOMContentLoaded", function() {
 		return scrollWidth;
 	}
 
-	function closeDevel() {
-		var inDevel = document.querySelector('.inDevel');
-		var close = document.querySelector('.inDevel__button');
-		var closeButton = document.querySelector('.inDevel__closeButton');
-		if (sessionStorage.getItem('closeDevel') !== 'close') {
-			inDevel.classList.remove('close', 'close__hide');
-			close.addEventListener('click', function() {
-				inDevel.classList.add('close');
-				sessionStorage.setItem('closeDevel', 'close');
-				addClassDelay(inDevel, 'close__hide', closeRemoveDelay);
-			});
-			closeButton.addEventListener('click', function(ev) {
-				inDevel.classList.add('close');
-				addClassDelay(inDevel, 'close__hide', closeRemoveDelay);
-			});
-		}
-	}
-
-	function addClassDelay(elem, strClass, delay) {
-		setTimeout(function() {
-			elem.classList.add(strClass);
-		}, delay);
-	}
+	// function closeDevel() {
+	// 	var inDevel = document.querySelector('.inDevel');
+	// 	var close = document.querySelector('.inDevel__button');
+	// 	var closeButton = document.querySelector('.inDevel__closeButton');
+	// 	if (sessionStorage.getItem('closeDevel') !== 'close') {
+	// 		inDevel.classList.remove('close', 'close__hide');
+	// 		close.addEventListener('click', function() {
+	// 			inDevel.classList.add('close');
+	// 			sessionStorage.setItem('closeDevel', 'close');
+	// 			addClassDelay(inDevel, 'close__hide', closeRemoveDelay);
+	// 		});
+	// 		closeButton.addEventListener('click', function(ev) {
+	// 			inDevel.classList.add('close');
+	// 			addClassDelay(inDevel, 'close__hide', closeRemoveDelay);
+	// 		});
+	// 	}
+	// }
+	//
+	// function addClassDelay(elem, strClass, delay) {
+	// 	setTimeout(function() {
+	// 		elem.classList.add(strClass);
+	// 	}, delay);
+	// }
 
 });
