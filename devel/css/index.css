@@ -181,29 +181,6 @@ body {
     .about {
       width: 80%; } }
 
-@media screen and (max-width: 767px) {
-  .radiusSVG {
-    display: none; } }
-
-@media screen and (min-width: 768px) {
-  .radiusSVG {
-    display: block;
-    -webkit-transition-duration: 500ms;
-    -o-transition-duration: 500ms;
-    transition-duration: 500ms;
-    fill: rgba(0, 0, 0, 0.3);
-    position: fixed;
-    width: 15px;
-    height: 15px; } }
-
-.radiusSVG__topRight {
-  left: 100%;
-  top: 0; }
-
-.radiusSVG__leftBottom {
-  top: 100%;
-  left: 0; }
-
 .left,
 .right {
   padding: 15px 10px 10px;
