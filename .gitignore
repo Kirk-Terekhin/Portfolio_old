@@ -1,2 +1,4 @@
+.idea/
 node_modules/
-devel/libs/
+#source/build/
+package-lock.json

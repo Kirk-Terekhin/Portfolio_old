@@ -1,0 +1,21 @@
+.projects
+  padding: 10px
+  +box()
+.project
+  padding: 10px
+  +grid(3)
+.grid__column
+  +grid(3)
+  +_mr($before_xs)
+    width: 100%/$grid_xs
+  +mr_($xs)
+    width: 100%/$grid_sm
+  +mr_($sm)
+    width: 100%/$grid_sm
+  +mr_($md)
+    width: 100%/$grid_md
+  +mr_($lg)
+    width: 100%/$grid_lg
+
+  .project
+    width: 100%

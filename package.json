@@ -1,33 +1,33 @@
 {
-	"name": "Portfolio",
+	"name": "ragnarok",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+		"installs": "npm run script1 && npm run script2",
+		"installPackages": "npm i -D yarn browser-sync del gulp gulp-autoprefixer gulp-clean-css gulp-concat gulp-jade gulp-plumber gulp-pug gulp-rename gulp-sass gulp-uglify node-sass",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author": "kirill",
+	"author": "DeathMetallDrummer@gmail.com",
 	"license": "ISC",
 	"devDependencies": {
-		"bower": "^1.8.2",
-		"browser-sync": "^2.21.0",
-		"del": "^3.0.0",
-		"gulp": "^3.9.1",
-		"gulp-autoprefixer": "^4.0.0",
-		"gulp-clean-css": "^3.9.0",
+		"browser-sync": "^2.26.7",
+		"del": "^5.0.0",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^6.1.0",
+		"gulp-clean-css": "^4.2.0",
 		"gulp-concat": "^2.6.1",
-		"gulp-imagemin": "^4.0.0",
 		"gulp-jade": "^1.1.0",
-		"gulp-plumber": "^1.1.0",
-		"gulp-pug": "^3.3.0",
-		"gulp-rename": "^1.2.2",
-		"gulp-sass": "^3.1.0",
-		"gulp-svg-sprites": "^4.1.2",
-		"gulp-svgmin": "^1.2.4",
-		"gulp-uglify": "^3.0.0",
-		"gulp-uncss": "^1.0.6",
-		"gulp.spritesmith": "^6.7.0",
-		"node-sass": "^4.7.2",
-		"run-sequence": "^2.2.0"
+		"gulp-plumber": "^1.2.1",
+		"gulp-pug": "^4.0.1",
+		"gulp-rename": "^1.4.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-uglify": "^3.0.2",
+		"node-sass": "^4.12.0",
+		"yarn": "^1.17.3"
+	},
+	"repository": "https://github.com/Deathmetalldrummer/Archetype.git",
+	"dependencies": {
+		"jquery": "^3.4.1"
 	}
 }

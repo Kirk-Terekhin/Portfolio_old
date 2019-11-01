@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+	include ./_common/_utility/_variables
+	include ./_common/_utility/_mixins
+	include ./_layout/_mounting
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		link(href="./favicon/favicon.png" rel="shortcut icon" type="image/png")
+		link(href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet")
+		link(rel="stylesheet", href="./index.css")
+		block title
+			title Портфолио | Терёхин Кирилл
+	body
+		block body
+		script(src='./index.js')
+
+

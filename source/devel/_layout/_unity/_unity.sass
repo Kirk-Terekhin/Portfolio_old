@@ -1,0 +1,43 @@
+.unity
+  +box()
+  background-color: $menu_bg
+  transition-duration: 500ms
+  overflow: auto
+  z-index: 99
+  .unity_active &
+    background-color: $unity_active
+  +_mr($before_sm)
+    background-color: $unity_active
+    width: 100%
+  +mr_($sm)
+    position: fixed
+    left: $nav_width_sm
+    width: $about_width_sm
+    max-height: 100%
+    top: 0
+    border-radius: 0 0 0.9em 0
+    z-index: -1
+    opacity: 0
+    .unity_active &
+      z-index: 99*99*99
+      opacity: 1
+  +mr_($lg)
+    width: $about_width_lg
+
+.unity__left,
+.unity__right
+  padding: 15px 10px 10px
+  overflow: hidden
+  +mr_($md)
+    +grid(6)
+.unity__left
+  +mr_($sm)
+    +grid(5)
+  +mr_($lg)
+    +grid(5)
+
+.unity__right
+  +mr_($sm)
+    +grid(7)
+  +mr_($lg)
+    +grid(7)

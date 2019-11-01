@@ -1,0 +1,58 @@
+@import "_sass"
+html,
+body
+  width: 100%
+  font-size: 16px
+  margin: 0
+  +font('Ubuntu-R')
+
+*
+  box-sizing: border-box
+  max-width: 100%
+img,svg
+  max-width: 100%
+
+.wrap
+  +box()
+  font-family: 'Ubuntu', sans-serif
+  +_mr($before_sm)
+    background: url(./pictures/mobile_bg.png) repeat center
+  +mr_($sm)
+    overflow: hidden
+    height: 100vh
+    background: url(./pictures/bg.jpg) no-repeat bottom left fixed
+    background-size: cover
+.wrap__nav
+  +_mr($before_sm)
+    display: none
+  +mr_($sm)
+    +grid(5%)
+    height: 100%
+.wrap__unity
+.wrap__projects
+  height: 100%
+  +_mr($before_sm)
+    +grid()
+  +mr_($sm)
+    overflow: auto
+    +grid(100%)
+
+
+
+
+
+.bottomLine
+  display: inline-block
+  padding-bottom: 5px
+  padding-right: 10px
+  border-bottom: 2px solid $ubuntu
+.hidden_xs
+  +_mr($before_sm)
+    display: none
+  +mr_($sm)
+    display: block
+.hidden_sm
+  +_mr($before_sm)
+    display: block
+  +mr_($sm)
+    display: none
